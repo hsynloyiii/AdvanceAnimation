@@ -1,6 +1,7 @@
 package com.example.advanceanimation.fragment.propertyanim
 
-/* The property animation let us define the following characteristics of an animation :
+/* The property animation system is a robust framework that allows us to animate almost everything
+The property animation let us define the following characteristics of an animation :
     * Duration = it is the duration of animation. The default length is 300ms
     * Time interpolation = We can define how the value for property are calculated as a function of animation's current elapsed time
     * Repeat count and behaviour = We can specify to have animation repeat and how many time to repeat when reaches the end of duration.

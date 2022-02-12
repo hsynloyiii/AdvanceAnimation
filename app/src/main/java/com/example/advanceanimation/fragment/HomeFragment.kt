@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.advanceanimation.R
@@ -16,6 +17,16 @@ import com.example.advanceanimation.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+
+    private val homeNavOption: NavOptions = navOptions {
+        anim {
+            enter = R.anim.nav_default_enter_anim
+            exit = R.anim.nav_default_exit_anim
+            popEnter = R.anim.nav_default_pop_enter_anim
+            popExit = R.anim.nav_default_pop_exit_anim
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,14 +50,7 @@ class HomeFragment : Fragment() {
                 .actionHomeFragmentToPropertyAnimFragment()
             findNavController().navigate(
                 action,
-                navOptions {
-                    anim {
-                        enter = R.anim.nav_default_enter_anim
-                        exit = R.anim.nav_default_exit_anim
-                        popEnter = R.anim.nav_default_pop_enter_anim
-                        popExit = R.anim.nav_default_pop_exit_anim
-                    }
-                }
+                homeNavOption
             )
         }
     }
