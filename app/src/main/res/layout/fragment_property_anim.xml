@@ -3,10 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+<!--    android:animateLayoutChanges="true"-->
+    <LinearLayout
+        android:id="@+id/linearViewGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray"
+        android:orientation="vertical"
         tools:context=".fragment.propertyanim.PropertyAnimFragment">
 
         <ImageButton
@@ -14,11 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/popBackImage"
-            app:layout_constraintBottom_toTopOf="@id/title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_round_arrow_back_24"
             app:tint="@color/black" />
 
@@ -27,13 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="58dp"
+            android:layout_marginTop="16dp"
             android:text="@string/propertyAnim"
             android:textColor="@color/black"
             android:textSize="32sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
 
 
         <TextView
@@ -44,9 +44,7 @@
             android:layout_marginTop="16dp"
             android:text="ValueAnimator anim"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textObjectAnimator"
@@ -56,10 +54,19 @@
             android:layout_marginTop="16dp"
             android:text="ObjectAnimator anim"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textValueAnimator" />
+            android:textSize="20sp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnStateListAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Button with StateListAnimator"
+            android:textAllCaps="false"
+            app:cornerRadius="8dp" />
+<!--        android:stateListAnimator="@xml/animate_scale"-->
+
+    </LinearLayout>
 
 </layout>

@@ -50,5 +50,64 @@ The property animation let us define the following characteristics of an animati
         * TimeInterpolator : An interface that allows us to implement our own interpolator
 
 
+    We can listen for important events during an animation's duration with the listener below:
+    . Animator.AnimatorListener =>
+        * onAnimationStart() - Called when animation starts. (we can call doOnStart {})
+        * onAnimationEnd() - Called when animation ends. (we can call doOnEnd {})
+        * onAnimationRepeat() - Called when animation repeat itself. (we can call doOnRepeat {})
+        * onAnimationCancel() - Called when animation is cancelled. A cancelled animation also calls onAnimationEnd() (we can call doOnCancel {})
+    . ValueAnimator.AnimatorUpdateListener =>
+        * onAnimationUpdate() - called on every frame of the animation
+            Depending on what property or object we animating, we might need to call invalidate() on a view to force that area of the screen redraw itself (Described in fragment)
+    We can extendAnimatorListenerAdapter into addLister() instead of implementing the Animator.AnimatorListener interface, if we don't wanna implement all of the method of the
+        Animator.AnimatorListener interface or we can use doOn... {} (better idea)
+        ObjectAnimator.ofFloat(newBall, "alpha", 1f, 0f).apply {
+            duration = 250
+            addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationEnd(animation: Animator) {
+                    balls.remove((animation as ObjectAnimator).target)
+                }
+            })
+            or
+            doOnEnd {
+                balls.remove((animation as ObjectAnimator).target)
+            }
+        }
+
+    * Big note: when ValueAnimator or ObjectAnimator runs they  =>
+        1. calculate a current elapsed fraction of the animation (value between 0 and 1)
+        2. calculate an interpolated version of that depending on what interpolator that we are using
+        The interpolated fraction is what our TypeEvaluator receives through the fraction parameter
+
+
+Animate Layout Changes =>
+    The property animation system provides the capability to animate changes to ViewGroup objects
+    We can animate layout changes within a ViewGroup with LayoutTransition class. Views inside a ViewGroup can go through appearing and disappearing animation when we add or remove
+        them from a ViewGroup or when we change the View's setVisibility(). The remaining Views inside ViewGroup can also animate into their new positions when add or remove Views.
+    We can define animations in a LayoutTransition object by calling setAnimator() and pass an Animator object with one of following LayoutTransition constants:
+        * APPEARING - A flag indicate that animation runs on items that are appearing in the container
+        * CHANGE_APPEARING - A flag indicate that animation runs on items that are changing due to new item appearing in the container
+        * DISAPPEARING - A flag indicate that animation runs on items that are disappearing from the container
+        * CHANGE_DISAPPEARING - A flag indicate that animation runs on items that are changing due to an item disappearing from the container
+    We can define our own custom animation for these four types of events, to customize the look of our layout transition or just tell thee animation system to use default anim.
+    * The LayoutAnimations shows us how to define animations for layout transition and set the animations on the View objects that we wanna animate
+    =>
+    The LayoutAnimationByDefault and its corresponding layout_animations_by_default.xml layout resource file shows how to enable the default transition for ViewGroup.
+        We only have to enable the android:animateLayoutChanges for the ViewGroup
+
+
+Animate view state change using StateListAnimator =>
+    The StateListAnimator class let us define animators that runs when the state of a view changes. It behaves as a wrapper for an Animator object, calling that animation whenever
+        the specified view state (such as "pressed" or "focused") changes.
+    The StateListAnimator can be defined in an XML resource with a root <selector> element and child <item> elements that each specify a different view state defined by the StateListAnimator
+        class.( Each <item> contains the definition for a property animation set )
+    For example in `animate_scale` file creates a state list animator that change the x and y scale of the view when it's pressed.
+        And to attach the state list animator to a view, add the android:stateListAnimator attr as set into button in fragment
+        Or we can assign AnimatorInflater.loadStateListAnimator() method to the View.setStateListAnimator method\
+
+
+
+Specify Keyframes =>
+    A Keyframe object consists of a time/value pair which let us define a specific state at a specific time of an animation
  */
 
