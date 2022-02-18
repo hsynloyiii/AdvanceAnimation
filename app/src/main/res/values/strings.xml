@@ -6,4 +6,5 @@
     <string name="property_animation">Property Animation</string>
     <string name="propertyAnim">PropertyAnim</string>
     <string name="popBackImage">popBackImage</string>
+    <string name="animate_drawable_graphic">Animate drawable graphic</string>
 </resources>

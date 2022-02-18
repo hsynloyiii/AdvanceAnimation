@@ -4,10 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/animate_scale.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/animator_vector_drawable.xml" value="0.1625" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/ic_round_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/rocket_thrust.xml" value="0.1625" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/vector_drawable.xml" value="0.1625" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_animate_drawable.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_property_anim.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_reveal_or_hide_view_using_animation.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/xml/animate_scale.xml" value="0.1" />
       </map>
     </option>

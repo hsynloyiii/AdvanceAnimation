@@ -53,6 +53,15 @@ class HomeFragment : Fragment() {
                 homeNavOption
             )
         }
+
+        binding.matAnimateDrawable.setOnClickListener {
+            val action = HomeFragmentDirections
+                .actionHomeFragmentToAnimateDrawableFragment()
+            findNavController().navigate(
+                action,
+                homeNavOption
+            )
+        }
     }
 
 }

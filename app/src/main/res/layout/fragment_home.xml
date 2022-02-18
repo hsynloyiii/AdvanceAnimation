@@ -68,7 +68,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/mat..."
+                        android:id="@+id/matAnimateDrawable"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="4dp"
@@ -86,17 +86,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="..."
+                            android:text="Animate Drawable"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
 
                     </com.google.android.material.card.MaterialCardView>
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>

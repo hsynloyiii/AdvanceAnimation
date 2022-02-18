@@ -15,10 +15,13 @@ import androidx.core.animation.doOnEnd
 import androidx.core.animation.doOnRepeat
 import androidx.core.animation.doOnStart
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.advanceanimation.R
 import com.example.advanceanimation.databinding.FragmentHomeBinding
 import com.example.advanceanimation.databinding.FragmentPropertyAnimBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class PropertyAnimFragment : Fragment() {
@@ -46,6 +49,10 @@ class PropertyAnimFragment : Fragment() {
         animateLayoutChanges()
 
         stateListAnimator()
+
+        keyFrames()
+
+        propertyAnimatorInXML()
 
         return binding.root
     }
@@ -244,6 +251,67 @@ class PropertyAnimFragment : Fragment() {
         }
 
         binding.btnStateListAnimator.stateListAnimator = stateListAnimScale
+    }
+
+    private fun keyFrames() {
+        /*
+        To instantiate KeyFrame object we must use of the factory methods, ofInt(), ofFloat(), or ofObject(). Then we call ofKeyframe()
+            factory method to obtain a PropertyValuesHolder object. Then we can create our ObjectAnimator
+        PropertyValueHolder = This class holds information about a property and the values that that property should take on during animation
+            PropertyValuesHolder objects can be used to create animation with ValueAnimator or ObjectAnimator.
+        KeyFrame take fraction (The time which value happened (between 0 and 1 representing the fraction of time elapsed of the overall animation ))
+            and value which object will animate to as the animation (The value for the animation between keyframe will be calculated as an interpolation
+            between the value and those keyframe)
+         */
+        val kf0 = Keyframe.ofFloat(0f, 0f)
+        val kf1 = Keyframe.ofFloat(.5f, 360f)
+        val kf2 = Keyframe.ofFloat(1f, 0f)
+        val pvhRotation = PropertyValuesHolder.ofKeyframe("rotation", kf0, kf1, kf2)
+        ObjectAnimator.ofPropertyValuesHolder(binding.textKeyframe, pvhRotation).apply {
+            duration = 5000
+            start()
+        }
+    }
+
+    private fun viewPropertyAnimator(v: View) {
+        // Multiple ObjectAnimator objects
+        val animX = ObjectAnimator.ofFloat(v, "x", 50f)
+        val animY = ObjectAnimator.ofFloat(v, "y", 100f)
+        AnimatorSet().apply {
+            playTogether(animX, animY)
+            start()
+        }
+
+        // One ObjectAnimator
+        val pvhX = PropertyValuesHolder.ofFloat("x", 50f)
+        val pvhY = PropertyValuesHolder.ofFloat("y", 100f)
+        ObjectAnimator.ofPropertyValuesHolder(v, pvhX, pvhY).start()
+
+        // ViewPropertyAnimator
+        v.animate().x(50f).y(50f)
+    }
+
+    private fun propertyAnimatorInXML() {
+        // As said we should inflate our animator XML as AnimatorSet(if it is set at top) and call the setTarget() for all children of AnimatorSet
+        (AnimatorInflater.loadAnimator(
+            context,
+            R.animator.property_animator
+        ) as AnimatorSet).apply {
+            setTarget(binding.textPropertyAnimWithXML)
+            start()
+        }
+
+        lifecycleScope.launch {
+            delay(3000)
+            // In here we inflate the ValueAnimator but notice that we should add an AnimatorUpdateListener
+            (AnimatorInflater.loadAnimator(context, R.animator.animator) as ValueAnimator).apply {
+                addUpdateListener {
+                    binding.textPropertyAnimWithXML.scaleX = it.animatedValue as Float
+                    binding.textPropertyAnimWithXML.scaleY = it.animatedValue as Float
+                }
+                start()
+            }
+        }
     }
 
     private fun onClick() {

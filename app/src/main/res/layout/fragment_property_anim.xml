@@ -67,6 +67,28 @@
             app:cornerRadius="8dp" />
 <!--        android:stateListAnimator="@xml/animate_scale"-->
 
+
+        <TextView
+            android:id="@+id/textKeyframe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Anim with keyframe"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textPropertyAnimWithXML"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Property anim with XMl"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
     </LinearLayout>
 
 </layout>

@@ -1,5 +1,4 @@
 package com.example.advanceanimation.fragment.propertyanim
-
 /* The property animation system is a robust framework that allows us to animate almost everything
 The property animation let us define the following characteristics of an animation :
     * Duration = it is the duration of animation. The default length is 300ms
@@ -108,6 +107,37 @@ Animate view state change using StateListAnimator =>
 
 
 Specify Keyframes =>
-    A Keyframe object consists of a time/value pair which let us define a specific state at a specific time of an animation
+    A Keyframe object consists of a time/value pair which let us define a specific state at a specific time of an animation. Each keyframes can also have its own interpolator.
+        to control the behaviour of the animation in the interval between the previous keyframe's time and the time of this keyframe.
+
+
+Property animation system vs View animation system =>
+    Property animation allow streamlined animation of View objects and offer a few advantages over the view animation system.
+    . The view animation system transformed View objects by changing the way that they were drawn. This resulted in the View being animated, but caused no changes in the View object itself.
+    This led to behaviour such as an object still existing in its original location, even though it was drawn on a different location on the screen
+    But in property animation system the actual properties of View object will change. And also call the invalidate() method to refresh the screen whenever its properties are changes.
+
+
+Animate using ViewPropertyAnimator =>
+    The ViewPropertyAnimator provides a simple way to animate several properties of a View, using a single underlying Animator object. It behaves much like an ObjectAnimator, because it modifies
+        the actual values of the view's properties but is more efficient when animating many properties at once.
+        The code with ViewPropertyAnimator is much more concise and easier to read.
+        The viewPropertyAnimator() in fragment shows the difference in using multiple ObjectAnimator, a single Object Animator and the ViewPropertyAnimator when simultaneously animating the x and y
+
+
+Declare animations in XML =>
+    Also we can declare it in XML and reuse it in multiple activities/fragments
+    We should save property animation XML files in res/animator/
+    The classes and XML declarations =>
+        . ValueAnimator = <animator>
+        . ObjectAnimator = <objectAnimator>
+        . AnimatorSet = <set>
+    And to run it we must inflate the XML resources in our code to an AnimatorSet object and set the target object for all of the animation set by calling setTarget() to sets a single target object
+        for all children of the AnimatorSet.
+    The example of above is in the property_animator XML file and propertyAnimatorInXML() in fragment
+
+    Also we can declare ValueAnimator in XML by <animator> but in code after inflating we must add in AnimatorUpdateListener to get the update animation value, and use it in a property of one of our
+        views. Declared in animator XML and also in the same propertyAnimatorInXML() in fragment
  */
+
 

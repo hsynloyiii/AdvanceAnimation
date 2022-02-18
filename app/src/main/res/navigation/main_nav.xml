@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_homeFragment_to_propertyAnimFragment"
             app:destination="@id/propertyAnimFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_animateDrawableFragment"
+            app:destination="@id/animateDrawableFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_revealOrHideViewUsingAnimationFragment"
+            app:destination="@id/revealOrHideViewUsingAnimationFragment" />
     </fragment>
     <fragment
         android:id="@+id/propertyAnimFragment"
@@ -21,6 +27,24 @@
         tools:layout="@layout/fragment_property_anim">
         <action
             android:id="@+id/action_propertyAnimFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animateDrawableFragment"
+        android:name="com.example.advanceanimation.fragment.animatedrawable.AnimateDrawableFragment"
+        android:label="AnimateDrawableFragment"
+        tools:layout="@layout/fragment_animate_drawable">
+        <action
+            android:id="@+id/action_animateDrawableFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/revealOrHideViewUsingAnimationFragment"
+        android:name="com.example.advanceanimation.fragment.revealorhide.RevealOrHideViewUsingAnimationFragment"
+        android:label="fragment_reveal_or_hide_view_using_animation"
+        tools:layout="@layout/fragment_reveal_or_hide_view_using_animation" >
+        <action
+            android:id="@+id/action_revealOrHideViewUsingAnimationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 
