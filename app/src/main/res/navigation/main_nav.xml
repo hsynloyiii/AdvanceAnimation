@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_revealOrHideViewUsingAnimationFragment"
             app:destination="@id/revealOrHideViewUsingAnimationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moveViewUsingAnimationFragment"
+            app:destination="@id/moveViewUsingAnimationFragment" />
     </fragment>
     <fragment
         android:id="@+id/propertyAnimFragment"
@@ -45,6 +48,27 @@
         tools:layout="@layout/fragment_reveal_or_hide_view_using_animation" >
         <action
             android:id="@+id/action_revealOrHideViewUsingAnimationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_revealOrHideViewUsingAnimationFragment_to_cardFlippedAnimatedFragment"
+            app:destination="@id/cardFlippedAnimatedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFlippedAnimatedFragment"
+        android:name="com.example.advanceanimation.fragment.revealorhide.CardFlippedAnimatedFragment"
+        android:label="fragment_card_flipped_animated"
+        tools:layout="@layout/fragment_card_flipped_animated" >
+        <action
+            android:id="@+id/action_cardFlippedAnimatedFragment_to_revealOrHideViewUsingAnimationFragment"
+            app:destination="@id/revealOrHideViewUsingAnimationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moveViewUsingAnimationFragment"
+        android:name="com.example.advanceanimation.fragment.moveview.MoveViewUsingAnimationFragment"
+        android:label="MoveViewUsingAnimationFragment"
+        tools:layout="@layout/fragment_move_view_using_animation">
+        <action
+            android:id="@+id/action_moveViewUsingAnimationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 

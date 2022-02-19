@@ -7,4 +7,8 @@
     <string name="propertyAnim">PropertyAnim</string>
     <string name="popBackImage">popBackImage</string>
     <string name="animate_drawable_graphic">Animate drawable graphic</string>
+    <string name="reveal_hide_view">Reveal/Hide view</string>
+
+    <integer name="card_flip_time_full">2000</integer>
+    <integer name="card_flip_time_half">1000</integer>
 </resources>

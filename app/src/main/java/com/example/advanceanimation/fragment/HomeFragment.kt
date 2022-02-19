@@ -1,5 +1,6 @@
 package com.example.advanceanimation.fragment
 
+import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.advanceanimation.R
@@ -17,16 +20,6 @@ import com.example.advanceanimation.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-
-    private val homeNavOption: NavOptions = navOptions {
-        anim {
-            enter = R.anim.nav_default_enter_anim
-            exit = R.anim.nav_default_exit_anim
-            popEnter = R.anim.nav_default_pop_enter_anim
-            popExit = R.anim.nav_default_pop_exit_anim
-        }
-    }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,23 +38,36 @@ class HomeFragment : Fragment() {
     }
 
     private fun onClick() {
-        binding.matPropertyAnimation.setOnClickListener {
-            val action = HomeFragmentDirections
+        binding.matPropertyAnimation.navigateToDestination(
+            HomeFragmentDirections
                 .actionHomeFragmentToPropertyAnimFragment()
-            findNavController().navigate(
-                action,
-                homeNavOption
-            )
-        }
+        )
 
-        binding.matAnimateDrawable.setOnClickListener {
-            val action = HomeFragmentDirections
+        binding.matAnimateDrawable.navigateToDestination(
+            HomeFragmentDirections
                 .actionHomeFragmentToAnimateDrawableFragment()
-            findNavController().navigate(
-                action,
-                homeNavOption
-            )
-        }
-    }
+        )
 
+        binding.matRevealOrHideAnimation.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToRevealOrHideViewUsingAnimationFragment()
+        )
+
+        binding.matMoveViewUsingAnimation.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToMoveViewUsingAnimationFragment()
+        )
+    }
 }
+
+private fun View.navigateToDestination(directions: NavDirections) =
+    setOnClickListener {
+        findNavController().navigate(directions, navOptions {
+            anim {
+                enter = R.anim.nav_default_enter_anim
+                exit = R.anim.nav_default_exit_anim
+                popEnter = R.anim.nav_default_pop_enter_anim
+                popExit = R.anim.nav_default_pop_exit_anim
+            }
+        })
+    }
