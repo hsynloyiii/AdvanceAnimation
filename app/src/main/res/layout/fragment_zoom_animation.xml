@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/containerFragmentZoomAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.zoomanim.ZoomAnimationFragment">
+
+        <LinearLayout
+            android:id="@+id/linearViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageBtnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/popBackImage"
+                app:srcCompat="@drawable/ic_round_arrow_back_24"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Zoom animation"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:id="@+id/imageThumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rocket_thrust1" />
+
+        </LinearLayout>
+
+        <!-- This is initially-hidden ImageView will hold the expanded/zoomed version
+            of the image above. Without transformation applied, it takes up the entire
+            screen. To achieve zoom animation, this view's bound are animated from the
+            bounds of the imageViewWillZoom button above, to its final laid-out(chide shde)
+            bounds. -->
+        <ImageView
+            android:id="@+id/imageViewExpanded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:visibility="invisible"/>
+
+    </FrameLayout>
+
+</layout>

@@ -57,6 +57,11 @@ class HomeFragment : Fragment() {
             HomeFragmentDirections
                 .actionHomeFragmentToMoveViewUsingAnimationFragment()
         )
+
+        binding.matZoomAnimation.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToZoomAnimationFragment()
+        )
     }
 }
 

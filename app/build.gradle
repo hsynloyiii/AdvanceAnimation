@@ -48,7 +48,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Kotlin
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.0-alpha01")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.0-alpha01")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.0-alpha02")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.0-alpha02")
 
+    // Physics-based animation
+    implementation("androidx.dynamicanimation:dynamicanimation:1.0.0")
 }
