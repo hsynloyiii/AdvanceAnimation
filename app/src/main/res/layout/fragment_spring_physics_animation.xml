@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:background="@color/gray"
         android:orientation="vertical"
-        tools:context=".animationAndTransition.fragment.animatedrawable.AnimateDrawableFragment">
+        tools:context=".animationAndTransition.fragment.springphysics.SpringPhysicsAnimationFragment">
 
         <ImageButton
             android:id="@+id/imageBtnBack"
@@ -28,27 +28,40 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="@string/animate_drawable_graphic"
+            android:text="Spring animation"
             android:textColor="@color/black"
             android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/imageAnimationDrawable"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="16dp"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY" />
-
-        <ImageView
-            android:id="@+id/imageAnimatorVectorDrawable"
+            android:id="@+id/imageViewSpring"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="16dp"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/rocket_thrust3" />
 
+        <ImageView
+            android:id="@+id/imageViewSpring2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rocket_thrust2" />
+
+
+        <ImageView
+            android:id="@+id/imageViewSpring3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/rocket_thrust1" />
 
     </LinearLayout>
 

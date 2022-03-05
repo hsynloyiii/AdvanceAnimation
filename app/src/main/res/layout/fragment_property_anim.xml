@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:background="@color/gray"
         android:orientation="vertical"
-        tools:context=".fragment.propertyanim.PropertyAnimFragment">
+        tools:context=".animationAndTransition.fragment.propertyanim.PropertyAnimFragment">
 
         <ImageButton
             android:id="@+id/imageBtnBack"

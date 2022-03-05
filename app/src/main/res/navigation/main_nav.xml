@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.advanceanimation.fragment.HomeFragment"
+        android:name="com.example.advanceanimation.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -25,10 +25,13 @@
         <action
             android:id="@+id/action_homeFragment_to_zoomAnimationFragment"
             app:destination="@id/zoomAnimationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_springPhysicsAnimationFragment"
+            app:destination="@id/springPhysicsAnimationFragment" />
     </fragment>
     <fragment
         android:id="@+id/propertyAnimFragment"
-        android:name="com.example.advanceanimation.fragment.propertyanim.PropertyAnimFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.propertyanim.PropertyAnimFragment"
         android:label="PropertyAnimFragment"
         tools:layout="@layout/fragment_property_anim">
         <action
@@ -37,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/animateDrawableFragment"
-        android:name="com.example.advanceanimation.fragment.animatedrawable.AnimateDrawableFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.animatedrawable.AnimateDrawableFragment"
         android:label="AnimateDrawableFragment"
         tools:layout="@layout/fragment_animate_drawable">
         <action
@@ -46,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/revealOrHideViewUsingAnimationFragment"
-        android:name="com.example.advanceanimation.fragment.revealorhide.RevealOrHideViewUsingAnimationFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.revealorhide.RevealOrHideViewUsingAnimationFragment"
         android:label="fragment_reveal_or_hide_view_using_animation"
         tools:layout="@layout/fragment_reveal_or_hide_view_using_animation" >
         <action
@@ -58,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/cardFlippedAnimatedFragment"
-        android:name="com.example.advanceanimation.fragment.revealorhide.CardFlippedAnimatedFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.revealorhide.CardFlippedAnimatedFragment"
         android:label="fragment_card_flipped_animated"
         tools:layout="@layout/fragment_card_flipped_animated" >
         <action
@@ -67,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/moveViewUsingAnimationFragment"
-        android:name="com.example.advanceanimation.fragment.moveview.MoveViewUsingAnimationFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.moveview.MoveViewUsingAnimationFragment"
         android:label="MoveViewUsingAnimationFragment"
         tools:layout="@layout/fragment_move_view_using_animation">
         <action
@@ -76,11 +79,20 @@
     </fragment>
     <fragment
         android:id="@+id/zoomAnimationFragment"
-        android:name="com.example.advanceanimation.fragment.zoomanim.ZoomAnimationFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.zoomanim.ZoomAnimationFragment"
         android:label="ZoomAnimationFragment"
         tools:layout="@layout/fragment_zoom_animation">
         <action
             android:id="@+id/action_zoomAnimationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/springPhysicsAnimationFragment"
+        android:name="com.example.advanceanimation.animationAndTransition.fragment.springphysics.SpringPhysicsAnimationFragment"
+        android:label="SpringPhysicsAnimationFragment"
+        tools:layout="@layout/fragment_spring_physics_animation">
+        <action
+            android:id="@+id/action_springPhysicsAnimationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 

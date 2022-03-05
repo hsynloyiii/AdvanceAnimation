@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.propertyanim
+package com.example.advanceanimation.animationAndTransition.fragment.propertyanim
 /* The property animation system is a robust framework that allows us to animate almost everything
 The property animation let us define the following characteristics of an animation :
     * Duration = it is the duration of animation. The default length is 300ms

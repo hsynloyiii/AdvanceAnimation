@@ -1,7 +1,5 @@
-package com.example.advanceanimation.fragment
+package com.example.advanceanimation
 
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDirections
-import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
-import com.example.advanceanimation.R
 import com.example.advanceanimation.databinding.FragmentHomeBinding
 
 
@@ -61,6 +56,10 @@ class HomeFragment : Fragment() {
         binding.matZoomAnimation.navigateToDestination(
             HomeFragmentDirections
                 .actionHomeFragmentToZoomAnimationFragment()
+        )
+        binding.matSpringAnimation.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToSpringPhysicsAnimationFragment()
         )
     }
 }

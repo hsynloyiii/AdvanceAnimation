@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.zoomanim
+package com.example.advanceanimation.animationAndTransition.fragment.zoomanim
 
 import android.animation.Animator
 import android.animation.AnimatorSet
@@ -62,6 +62,8 @@ class ZoomAnimationFragment : Fragment() {
         }
         // retrieve and cache the system's default short animation time
         shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
+
+
 
         return binding.root
     }

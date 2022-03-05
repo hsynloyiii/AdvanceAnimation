@@ -1,10 +1,12 @@
-package com.example.advanceanimation.fragment.propertyanim
+package com.example.advanceanimation.animationAndTransition.fragment.propertyanim
 
 import android.animation.*
 import android.graphics.drawable.AnimatedStateListDrawable
 import android.os.Bundle
+import android.transition.TransitionManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.SurfaceHolder
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -17,6 +19,8 @@ import androidx.core.animation.doOnStart
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.transition.AutoTransition
+import androidx.transition.Transition
 import com.example.advanceanimation.R
 import com.example.advanceanimation.databinding.FragmentHomeBinding
 import com.example.advanceanimation.databinding.FragmentPropertyAnimBinding
@@ -181,6 +185,8 @@ class PropertyAnimFragment : Fragment() {
             setAnimator(LayoutTransition.DISAPPEARING, scaleDown)
             enableTransitionType(LayoutTransition.CHANGING)
         }
+
+
 
     }
 

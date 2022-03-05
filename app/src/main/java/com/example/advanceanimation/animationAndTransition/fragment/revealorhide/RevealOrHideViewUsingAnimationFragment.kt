@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.revealorhide
+package com.example.advanceanimation.animationAndTransition.fragment.revealorhide
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter

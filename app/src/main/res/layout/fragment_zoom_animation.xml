@@ -7,7 +7,7 @@
         android:id="@+id/containerFragmentZoomAnimation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragment.zoomanim.ZoomAnimationFragment">
+        tools:context=".animationAndTransition.fragment.zoomanim.ZoomAnimationFragment">
 
         <LinearLayout
             android:id="@+id/linearViewGroup"

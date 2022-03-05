@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.zoomanim
+package com.example.advanceanimation.animationAndTransition.fragment.zoomanim
 
 /*
 First we have to create the small and large version of that View which we wanna zoom

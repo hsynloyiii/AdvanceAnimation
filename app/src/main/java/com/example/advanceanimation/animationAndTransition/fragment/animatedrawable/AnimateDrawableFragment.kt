@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.animatedrawable
+package com.example.advanceanimation.animationAndTransition.fragment.animatedrawable
 
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.graphics.drawable.AnimationDrawable

@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.animatedrawable
+package com.example.advanceanimation.animationAndTransition.fragment.animatedrawable
 
 /*
 Here is when we wanna animate several images or if we want one icon to morph into another after user's

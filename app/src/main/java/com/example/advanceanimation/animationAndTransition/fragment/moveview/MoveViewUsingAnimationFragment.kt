@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.moveview
+package com.example.advanceanimation.animationAndTransition.fragment.moveview
 
 import android.animation.ObjectAnimator
 import android.graphics.Path
@@ -66,6 +66,8 @@ class MoveViewUsingAnimationFragment : Fragment() {
             at which animation change at the beginning of the animation.
             The min value set to 0 (which our scale can have 0f at min) and max of 1.5
             The friction is 1.1 which define how quickly the velocity decreases in an animation
+
+        * DisplayMetrics = A structure describing general information about a display, such as its size, density, and font scaling
          */
         val pixelPerSecond: Float = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
             1F, resources.displayMetrics)

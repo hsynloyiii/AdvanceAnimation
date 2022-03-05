@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray"
-        tools:context=".fragment.HomeFragment">
+        tools:context=".animationAndTransition.fragment.HomeFragment">
 
         <TextView
             android:id="@+id/title"
@@ -195,7 +195,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/mat..."
+                        android:id="@+id/matSpringAnimation"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="4dp"
@@ -213,7 +213,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="..."
+                            android:text="Spring Animation"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:textSize="18sp"

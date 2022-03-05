@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.revealorhide
+package com.example.advanceanimation.animationAndTransition.fragment.revealorhide
 
 /*
 There are 3 common animations to use when showing or hiding a view

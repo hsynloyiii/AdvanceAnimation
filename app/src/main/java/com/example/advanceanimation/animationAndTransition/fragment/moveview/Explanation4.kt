@@ -1,4 +1,4 @@
-package com.example.advanceanimation.fragment.moveview
+package com.example.advanceanimation.animationAndTransition.fragment.moveview
 
 /*
 Objects on screen will often need to repositioned due to user interaction or some processing behind the scenes
@@ -47,6 +47,7 @@ Move views using a fling (partab) animation => is in the moveViewsWithFlingAnima
     GestureDetector.OnGestureListener and the VelocityTracker classes to retrieve and compute the velocity of touch gesture.
     For converting dp per second to pixels per second we should use TypedValue:
         val pixelPerSecond: Float = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpPerSecond, resources.displayMetrics)
+    We convert it because defining the value in dp allows velocity to be independent of density(chegali) and form factors (avamel shekl)
 
     Set an animation value range :
     We can set the min and max animation values when we wanna restrain(mahar krdn) the property value to a certain range. This range
