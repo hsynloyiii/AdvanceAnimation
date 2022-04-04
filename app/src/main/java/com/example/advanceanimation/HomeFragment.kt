@@ -61,6 +61,22 @@ class HomeFragment : Fragment() {
             HomeFragmentDirections
                 .actionHomeFragmentToSpringPhysicsAnimationFragment()
         )
+        binding.matTouchGesture.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToTouchGestureFragment()
+        )
+        binding.matScrollGesture.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToScrollGestureFragment()
+        )
+        binding.matMultiTouchGesture.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToMultiTouchGestureFragment()
+        )
+        binding.matTouchEventInViewGroup.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToTouchEventInViewGroupFragment()
+        )
     }
 }
 

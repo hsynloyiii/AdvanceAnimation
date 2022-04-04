@@ -28,6 +28,18 @@
         <action
             android:id="@+id/action_homeFragment_to_springPhysicsAnimationFragment"
             app:destination="@id/springPhysicsAnimationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_touchGestureFragment"
+            app:destination="@id/touchGestureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scrollGestureFragment"
+            app:destination="@id/scrollGestureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_multiTouchGestureFragment"
+            app:destination="@id/multiTouchGestureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_touchEventInViewGroupFragment"
+            app:destination="@id/touchEventInViewGroupFragment" />
     </fragment>
     <fragment
         android:id="@+id/propertyAnimFragment"
@@ -93,6 +105,42 @@
         tools:layout="@layout/fragment_spring_physics_animation">
         <action
             android:id="@+id/action_springPhysicsAnimationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/touchGestureFragment"
+        android:name="com.example.advanceanimation.touchAndInput.touchgesture.TouchGestureFragment"
+        android:label="TouchGestureFragment"
+        tools:layout="@layout/fragment_touch_gesture">
+        <action
+            android:id="@+id/action_touchGestureFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scrollGestureFragment"
+        android:name="com.example.advanceanimation.touchAndInput.animateScrollGesture.ScrollGestureFragment"
+        android:label="ScrollGestureFragment"
+        tools:layout="@layout/fragment_scroll_gesture">
+        <action
+            android:id="@+id/action_scrollGestureFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiTouchGestureFragment"
+        android:name="com.example.advanceanimation.touchAndInput.multiTouchGesture.MultiTouchGestureFragment"
+        android:label="MultiTouchGestureFragment"
+        tools:layout="@layout/fragment_multi_touch_gesture">
+        <action
+            android:id="@+id/action_multiTouchGestureFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/touchEventInViewGroupFragment"
+        android:name="com.example.advanceanimation.touchAndInput.touchEventInViewGroup.TouchEventInViewGroupFragment"
+        android:label="TouchEventInViewGroupFragment"
+        tools:layout="@layout/fragment_touch_event_in_view_group">
+        <action
+            android:id="@+id/action_touchEventInViewGroupFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 

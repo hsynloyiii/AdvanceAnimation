@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/linearViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        tools:context=".touchAndInput.touchgesture.TouchGestureFragment">
+
+        <ImageButton
+            android:id="@+id/imageBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/popBackImage"
+            app:srcCompat="@drawable/ic_round_arrow_back_24"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Touch gesture"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Capture touch event"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:background="@color/gray2"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Touch event with historical coordinates"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:background="@color/gray2"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Gesture Detector"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:background="@color/gray2"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Velocity Tracker"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:background="@color/gray2"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+
+        <EditText
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:hint="Pointer Capture"
+            android:background="@color/gray2"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            android:autofillHints="name"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
+</layout>

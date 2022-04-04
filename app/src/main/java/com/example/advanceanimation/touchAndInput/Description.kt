@@ -24,4 +24,54 @@ Event Listeners =>
     - onTouch() = From View.OnTouchListener. This is called when the user perform an action qualified as a touch event, including
     a press, a release, or any movement gesture on the screen (within the bounds of the item)
     - onCreateContextMenu() = From View.OnCreateContextMenu. This is called when a context menu is being built
+
+
+Event handlers =>
+    If we're building custom component from View, then we'll be able to define several callback methods used as default event handler
+    Some of the common callbacks used for event handling, including:
+    - onKeyDown(int, KeyEvent) = Called when a new key event occurs.
+    - onKeyUp(int, KeyEvent) = Called when a key up event occurs.
+    - onTrackballEvent(MotionEvent) = Called when a trackball motion event occurs.
+    - onTouchEvent(MotionEvent) = Called when a touch screen motion event occurs.
+    - onFocusChange(boolean, int, Rect) = Called when the view gains or loses focus.
+
+    When managing more complex events inside a layout, consider these other methods:
+    . Activity.dispatchTouchEvent(MotionEvent) = This allows Activity to intercept all touch event before they are dispatched to the window
+    . ViewGroup.onInterceptTouchEvent(MotionEvent) = This allows a ViewGroup to watch event as they are dispatched to child views
+    . ViewParent.requestDisallowInterceptTouchEvent(boolean) = Call this upon a parent View to indicate that it should not intercept touch
+    event with onInterceptTouchEvent(MotionEvent)
+
+* Android will call event handler first. As such returning true from these event listeners will stop the propagation of the event to other
+event listener and will also block the callback to the default event handler in the View.
+
+
+Touch mode =>
+    For touch-capable device, once the user touches the screen, the device will enter touch mode. From this point onward, only Views for
+    which isFocusableTouchMode() is true will be focusable, such as text editing widget. Other Views that are touchable, like buttons,
+    will not take focus when touched; they will simply fire their on-click listeners when pressed
+    Any time a user hits a directional key or scrolls with a trackball, the device will exit touch mode and find a view to take focus,
+    now the user may resume interacting with UI without touching the screen
+    The touch mode state is maintained throughout the entire system. To see the current state we can call isInTouchMode() to see whether
+    the device is currently in touch mode.
+
+
+
+Handling focus =>
+    This include changing the focus as View are removed or hidden, or as new Views become available. View indicate their willingness(tamayol)
+    to take focus through the isFocusable() method. To change whether a View can take focus call setFocusable().
+    When in touch mode we may query whether a View allows focus with isFocusableInTouchMode() and we can change this with
+    setFocusableInTouchMode()
+
+    Focus movement is based on an algorithm finds the nearest neighbor in a given direction. In this situation we can provide explicit
+    override with XML attrs in layout file: nextFocusDown, nextFocusLeft, nextFocusRight and nextFocusUp. Add one of this attr to the
+    View from which the focus is leaving. Define the value of attr to be the id of the View to which focus should be given
+
+    When we wanna declare focusable in our UI for a View that traditionally is not add the android:focusable XML attr to the View and
+    set it to true. We can also declare a View as focusable while in Touch Mode with android:focusableInTouchMode
+    To request particular view to take focus, call requestFocus()
+    To listen for focus event (be notified when a View receives or loses focus), use onFocusChange()
+
+
+
+
  */

@@ -9,6 +9,8 @@
     <string name="animate_drawable_graphic">Animate drawable graphic</string>
     <string name="reveal_hide_view">Reveal/Hide view</string>
     <string name="move_view_with_anim">Move view with anim</string>
+    <string name="touch_and_input">Touch and input</string>
+    <string name="handle_keyboard_input">Handle keyboard input</string>
 
     <integer name="card_flip_time_full">2000</integer>
     <integer name="card_flip_time_half">1000</integer>
