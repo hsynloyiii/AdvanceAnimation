@@ -40,6 +40,12 @@
         <action
             android:id="@+id/action_homeFragment_to_touchEventInViewGroupFragment"
             app:destination="@id/touchEventInViewGroupFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_keyboardInputFragment"
+            app:destination="@id/keyboardInputFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
     </fragment>
     <fragment
         android:id="@+id/propertyAnimFragment"
@@ -63,7 +69,7 @@
         android:id="@+id/revealOrHideViewUsingAnimationFragment"
         android:name="com.example.advanceanimation.animationAndTransition.fragment.revealorhide.RevealOrHideViewUsingAnimationFragment"
         android:label="fragment_reveal_or_hide_view_using_animation"
-        tools:layout="@layout/fragment_reveal_or_hide_view_using_animation" >
+        tools:layout="@layout/fragment_reveal_or_hide_view_using_animation">
         <action
             android:id="@+id/action_revealOrHideViewUsingAnimationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -75,7 +81,7 @@
         android:id="@+id/cardFlippedAnimatedFragment"
         android:name="com.example.advanceanimation.animationAndTransition.fragment.revealorhide.CardFlippedAnimatedFragment"
         android:label="fragment_card_flipped_animated"
-        tools:layout="@layout/fragment_card_flipped_animated" >
+        tools:layout="@layout/fragment_card_flipped_animated">
         <action
             android:id="@+id/action_cardFlippedAnimatedFragment_to_revealOrHideViewUsingAnimationFragment"
             app:destination="@id/revealOrHideViewUsingAnimationFragment" />
@@ -142,6 +148,140 @@
         <action
             android:id="@+id/action_touchEventInViewGroupFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/keyboardInputFragment"
+        android:name="com.example.advanceanimation.keyboardInput.KeyboardInputFragment"
+        android:label="fragment_keyboard_input"
+        tools:layout="@layout/fragment_keyboard_input">
+        <action
+            android:id="@+id/action_keyboardInputFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsAllFragment"
+        android:name="com.example.advanceanimation.resultsAll.ResultsAllFragment"
+        android:label="ResultsAllFragment"
+        tools:layout="@layout/fragment_results_all">
+        <action
+            android:id="@+id/action_resultsAllFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_swipeDrawerLayoutFragment"
+            app:destination="@id/swipeDrawerLayoutFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_scaleAndZoomFragment"
+            app:destination="@id/scaleAndZoomFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_darkAndLightCircularActivity"
+            app:destination="@id/darkAndLightCircularActivity" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_mainSwipeContainerActivity"
+            app:destination="@id/mainSwipeContainerActivity" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_dissolveFragment"
+            app:destination="@id/dissolveFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_fabTransformFragment"
+            app:destination="@id/fabTransformFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_staggerRecAnimFragment"
+            app:destination="@id/staggerRecAnimFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_reorderListFragment"
+            app:destination="@id/reorderListFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_swipeListFragment"
+            app:destination="@id/swipeListFragment" />
+        <action
+            android:id="@+id/action_resultsAllFragment_to_multipleSelectionListFragment"
+            app:destination="@id/multipleSelectionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/swipeDrawerLayoutFragment"
+        android:name="com.example.advanceanimation.resultsAll.swipeDrawer.SwipeDrawerLayoutFragment"
+        android:label="SwipeDrawerLayoutFragment"
+        tools:layout="@layout/fragment_swipe_drawer_layout">
+        <action
+            android:id="@+id/action_swipeDrawerLayoutFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scaleAndZoomFragment"
+        android:name="com.example.advanceanimation.resultsAll.scaleWithZoom.ScaleAndZoomFragment"
+        android:label="ScaleAndZoomFragment"
+        tools:layout="@layout/fragment_scale_and_zoom">
+        <action
+            android:id="@+id/action_scaleAndZoomFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/darkAndLightCircularActivity"
+        android:name="com.example.advanceanimation.resultsAll.nightAndLightCircular.DarkAndLightCircularActivity"
+        android:label="DarkAndLightCircularActivity"
+        app:action="android.intent.action.VIEW"
+        app:targetPackage="${applicationId}" />
+
+    <activity
+        android:id="@+id/mainSwipeContainerActivity"
+        android:name="com.example.advanceanimation.resultsAll.swipeFragmentContainer.MainSwipeContainerActivity"
+        android:label="MainSwipeContainerActivity"
+        app:action="android.intent.action.VIEW"
+        app:targetPackage="${applicationId}" />
+    <fragment
+        android:id="@+id/dissolveFragment"
+        android:name="com.example.advanceanimation.resultsAll.dissolve.DissolveFragment"
+        android:label="DissolveFragment"
+        tools:layout="@layout/fragment_dissolve">
+        <action
+            android:id="@+id/action_dissolveFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fabTransformFragment"
+        android:name="com.example.advanceanimation.resultsAll.fabTransform.FabTransformFragment"
+        android:label="fragment_fab_transform"
+        tools:layout="@layout/fragment_fab_transform">
+        <action
+            android:id="@+id/action_fabTransformFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staggerRecAnimFragment"
+        android:name="com.example.advanceanimation.resultsAll.listAnim.stagger.StaggerRecAnimFragment"
+        android:label="StaggerRecAnimFragment"
+        tools:layout="@layout/fragment_stagger_rec_anim">
+        <action
+            android:id="@+id/action_staggerRecAnimFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reorderListFragment"
+        android:name="com.example.advanceanimation.resultsAll.listAnim.reorder.ReorderListFragment"
+        android:label="ReorderListFragment"
+        tools:layout="@layout/fragment_reorder_list">
+        <action
+            android:id="@+id/action_reorderListFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/swipeListFragment"
+        android:name="com.example.advanceanimation.resultsAll.listAnim.swipe.SwipeListFragment"
+        android:label="SwipeListFragment"
+        tools:layout="@layout/fragment_swipe_list" >
+        <action
+            android:id="@+id/action_swipeListFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multipleSelectionListFragment"
+        android:name="com.example.advanceanimation.resultsAll.listAnim.multipleSelection.MultipleSelectionListFragment"
+        android:label="MultipleSelectionListFragment"
+        tools:layout="@layout/fragment_multiple_selection_list">
+        <action
+            android:id="@+id/action_multipleSelectionListFragment_to_resultsAllFragment"
+            app:destination="@id/resultsAllFragment" />
     </fragment>
 
 </navigation>

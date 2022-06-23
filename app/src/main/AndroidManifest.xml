@@ -10,8 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdvanceAnimation">
         <activity
+            android:name=".resultsAll.swipeFragmentContainer.MainSwipeContainerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".resultsAll.nightAndLightCircular.DarkAndLightCircularActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

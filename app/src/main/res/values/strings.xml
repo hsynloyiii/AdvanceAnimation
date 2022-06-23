@@ -11,7 +11,27 @@
     <string name="move_view_with_anim">Move view with anim</string>
     <string name="touch_and_input">Touch and input</string>
     <string name="handle_keyboard_input">Handle keyboard input</string>
+    <string name="animations">Animations</string>
 
     <integer name="card_flip_time_full">2000</integer>
     <integer name="card_flip_time_half">1000</integer>
+
+    <string-array name="countries_array">
+        <item>Iran</item>
+        <item>USA</item>
+        <item>UnitedKingdom</item>
+        <item>Canada</item>
+        <item>Belgium</item>
+        <item>France</item>
+        <item>Japan</item>
+        <item>China</item>
+        <item>Spain</item>
+        <item>Germany</item>
+        <item>Wales</item>
+        <item>Argentina</item>
+        <item>Portuguese</item>
+    </string-array>
+
+
+    <string name="longDesc">hiohf iH Hfih fai hfia hia hihfiohfoifhoiahiodhidhoihiiahii ia adi hap opas pooa ophdapf hdp fhap faip fi paddh opf padh as hiadh piahf pajfoajpifahpaif ]eif9[oewpfiowh93uh3hgwioh 99ug9 rbdjhisuf9ewiofhrishiavhaiohvago;igyuaghjvajkuyggquaghajkgvshgqago;hbshkgoaergbargifaogivgvisukgvkjaviuqyagueriaguhvyr4ae[u;sdgykqasvae;bvgashbvh.a aaur garbajsbvjvfbkjabvkk kja ab vhjab v kabvurhgivah o arpgfafhg earuhsiuf   uahfpawb uipl;qijq[  qfiii balg au vgpo haiu  j hjaphashv akjvaiuabahbavuawrh au uawi hhgjrbauvuds kjvb dshvawhiufhoieawgryr324y3r7t84ygawr g7awry4tuivr89y10ryg2uwkj oq8 hoiagr7g ;ofy p9lt g wy rf hiugf uirwh ui  r gg i uiwr      uih agfaukgfajadg ew gw iuasdg  7aew iajabasd jhg a jkdf ahvaui eiwohuiwaabdvdakafghjg bkajvhfaiugfai aiu aj liauuas gk askhka ad jkas  asu ga uar iuarroaurrhgiuaaiaiug7araruiiag iuigasiu aiuagiuuagiauuari uuagiuarguau iuar aiu gawrui aauig gaupig iau gauig iuasdgaiugaiugf7ww  gaiu aui garui gua aru gui agoahaoor auha i hajs ouiskbagjaviaaasauagkaivaasasdduaar aa oui daovsadusvavo va avvuasuagvkasl v sadkjbdsaadskhbvjkb askf voau9pfvaigbjgfa ishaifoahkhdo iaifaufajkbfasdfhihr8f her8fhiorhfiaerhew8ghiewrh iwehuweihiwrhuwe bhuabvajdskbja iaewhuiabauihv uweihreuhru vruhvruihruhior hiohvabsvjkabkvjbruhweioiab8aeh8 r9 w weioh wi wio hiweo wbkjvbskjvw ohweioiuiuvhavkjbdjkv abasjk bv uh auiadh vkjhsabhbskvbvashvkjahvjakdhgugyr7y4tugjkhbuirwgu7gilugruilrwyiuty7rgshbbshfihaggughu  o uhaaugavabaskbajkb kj kf ajkvb avb</string>
 </resources>

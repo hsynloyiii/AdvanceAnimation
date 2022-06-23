@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray2"
+        tools:context=".resultsAll.listAnim.multipleSelection.MultipleSelectionListFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recMultipleSelection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@drawable/fast_scroll"
+            android:scrollbars="vertical"
+            android:theme="@style/EdgeOverlayTheme"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    </FrameLayout>
+
+</layout>

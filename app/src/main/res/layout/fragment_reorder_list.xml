@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutReorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray2"
+        tools:context=".resultsAll.listAnim.reorder.ReorderListFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recReorderList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="8dp"
+            android:scrollbarThumbVertical="@drawable/fast_scroll"
+            android:scrollbars="vertical"
+            android:theme="@style/EdgeOverlayTheme"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <Button
+            android:id="@+id/btnIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Increase"
+            tools:ignore="HardcodedText" />
+
+    </FrameLayout>
+
+</layout>

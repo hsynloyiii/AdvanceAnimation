@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container_nav"
+    app:startDestination="@id/firstSwipeFragment">
+
+    <fragment
+        android:id="@+id/firstSwipeFragment"
+        android:name="com.example.advanceanimation.resultsAll.swipeFragmentContainer.FirstSwipeFragment"
+        android:label="FirstSwipeFragment"
+        tools:layout="@layout/fragment_first_swipe">
+        <action
+            android:id="@+id/action_firstSwipeFragment_to_secondSwipeFragment"
+            app:destination="@id/secondSwipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondSwipeFragment"
+        android:name="com.example.advanceanimation.resultsAll.swipeFragmentContainer.SecondSwipeFragment"
+        android:label="SecondSwipeFragment"
+        tools:layout="@layout/fragment_second_swipe">
+        <action
+            android:id="@+id/action_secondSwipeFragment_to_firstSwipeFragment"
+            app:destination="@id/firstSwipeFragment" />
+    </fragment>
+</navigation>

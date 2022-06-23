@@ -6,23 +6,44 @@
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/animate_scale.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/animator_vector_drawable.xml" value="0.1625" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/custom_path_interpolator.xml" value="0.1485" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/fast_scroll.xml" value="0.158" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/ic_round_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/item_selection_background.xml" value="0.177" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/item_selection_text_color.xml" value="0.177" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/rocket_thrust.xml" value="0.1625" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/drawable/vector_drawable.xml" value="0.1625" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/activity_dark_and_light_circular.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/activity_main_swipe_container.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_animate_drawable.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_card_flipped_animated.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_dissolve.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_fab_transform.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_first_swipe.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_keyboard_input.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_move_view_using_animation.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_multi_touch_gesture.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_multiple_selection_list.xml" value="0.2574074074074074" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_night_and_light_circular.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_property_anim.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_reorder_list.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_results_all.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_reveal_or_hide_view_using_animation.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_scale_and_zoom.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_scroll_gesture.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_second_swipe.xml" value="0.2609375" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_spring_physics_animation.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_stagger_rec_anim.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_swipe_drawer_layout.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_swipe_list.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_touch_event_in_view_group.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_touch_gesture.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/fragment_zoom_animation.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/item_recyclerview_bounce_effect.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/rocket_list_item.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/rocket_list_item2.xml" value="0.275" />
+        <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/layout/vertical_recycler_view.xml" value="0.275" />
         <entry key="..\:/AndroidStudioProjects/AdvanceAnimation/app/src/main/res/xml/animate_scale.xml" value="0.1" />
       </map>
     </option>

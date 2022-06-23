@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".resultsAll.fabTransform.FabTransformFragment">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/messageFragmentFABTransform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:text="Tap on the FAB to expand it"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/scrimBackgroundFragmentFabTransform"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_scim"
+            android:visibility="invisible"
+            app:layout_behavior="@string/fab_transformation_scrim_behavior" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabFragmentFabTransform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="ADD"
+            android:src="@drawable/ic_baseline_add_24"
+            app:backgroundTint="@color/black"
+            app:elevation="6dp"
+            app:tint="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <!--
+        A sheet that the FAB expands into
+        We used CircularRevealCardView to apply circular reveal effect
+        -->
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/sheetCardViewFragmentFabTransform"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:background="?attr/colorSurface"
+            android:visibility="invisible"
+            app:cardElevation="6dp"
+            app:layout_behavior="@string/fab_transformation_sheet_behavior"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/sheetContentFragmentFabTransform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/rocket_1"
+                    layout="@layout/rocket_list_item" />
+
+                <include
+                    android:id="@+id/rocket_2"
+                    layout="@layout/rocket_list_item" />
+
+                <include
+                    android:id="@+id/rocket_3"
+                    layout="@layout/rocket_list_item" />
+
+            </LinearLayout>
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

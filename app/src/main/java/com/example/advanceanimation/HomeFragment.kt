@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowInsets
+import androidx.core.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
@@ -28,6 +30,30 @@ class HomeFragment : Fragment() {
         )
 
         onClick()
+
+        /*
+        setOnApplyWindowInsetsListener = Applying window insets to appropriate view.
+        OnApplyWindowInsetsListener = Listener for applying window insets on a view in a custom way.
+        It give us back the view and WindowInsetsCompat (to describe a set of insets for window content)
+
+        getInsets(WindowInsetsCompat.Type.systemBars()) = get insets for all system bars. and also this return the Inset
+        (An Insets instance holds four integer offsets which describe changes to the four edges of a Rectangle)
+        The Type.systemBars() returns : Includes statusBars(), captionBar() as well as navigationBars(), but not ime().
+         */
+        ViewCompat.setOnApplyWindowInsetsListener(binding.btnGoToResults) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            /*
+            Apply the insets as a margin to the view
+             */
+            view.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = insets.top
+            }
+
+            /*
+            Return CONSUMED if we don't want the window insets to keep being passed down to descendant views
+             */
+            WindowInsetsCompat.CONSUMED
+        }
 
         return binding.root
     }
@@ -77,10 +103,20 @@ class HomeFragment : Fragment() {
             HomeFragmentDirections
                 .actionHomeFragmentToTouchEventInViewGroupFragment()
         )
+        binding.matKeyboardInput.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToKeyboardInputFragment()
+        )
+        binding.btnGoToResults.navigateToDestination(
+            HomeFragmentDirections
+                .actionHomeFragmentToResultsAllFragment()
+        )
     }
+
+
 }
 
-private fun View.navigateToDestination(directions: NavDirections) =
+fun View.navigateToDestination(directions: NavDirections) =
     setOnClickListener {
         findNavController().navigate(directions, navOptions {
             anim {
@@ -91,3 +127,4 @@ private fun View.navigateToDestination(directions: NavDirections) =
             }
         })
     }
+

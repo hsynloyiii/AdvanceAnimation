@@ -94,11 +94,13 @@ class MultiTouchGestureFragment : Fragment() {
                         event.getX(pointerIndex) to event.getY(pointerIndex)
                     }
 
-                    binding.view2.animate()
-                        .x(binding.view2.x + x - mLastTouchX)
-                        .y(binding.view2.y + y - mLastTouchY)
-                        .setDuration(0)
-                        .start()
+//                    binding.view2.animate()
+//                        .x(binding.view2.x + x - mLastTouchX)
+//                        .y(binding.view2.y + y - mLastTouchY)
+//                        .setDuration(0)
+//                        .start()
+                    binding.view2.x = binding.view2.x + x - mLastTouchX
+                    binding.view2.y = binding.view2.y + y - mLastTouchY
 //                    binding.view2.invalidate()
 
                     // Remember this touch position for the next move event

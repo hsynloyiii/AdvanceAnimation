@@ -99,7 +99,7 @@ class ZoomAnimationFragment : Fragment() {
         Also calculating the start scaling factor (the end scaling factor is always 1.0)
          */
         val startScale: Float
-        if (finalBounds.width() / finalBoundInt.height() > startBounds.width() / startBounds.height()) {
+        if (finalBounds.width() / finalBounds.height() > startBounds.width() / startBounds.height()) {
             // Extend(gostaresh) start bounds horizontally
             startScale = startBounds.height() / finalBounds.height()
             val startWidth: Float = startScale * finalBounds.width()
@@ -111,8 +111,8 @@ class ZoomAnimationFragment : Fragment() {
             startScale = startBounds.width() / finalBounds.width()
             val startHeight: Float = startScale * finalBounds.height()
             val deltaHeight: Float = (startHeight - startBounds.height()) / 2
-            startBounds.left -= deltaHeight.toInt()
-            startBounds.right += deltaHeight.toInt()
+            startBounds.top -= deltaHeight.toInt()
+            startBounds.bottom += deltaHeight.toInt()
         }
 
         // Hide the thumbnail and show the zoomed-in view. When the animation begins, it will position the zoomed-in view in the place of
